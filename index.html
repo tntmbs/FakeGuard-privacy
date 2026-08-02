@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FakeGuard Privacy Policy</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1a1a1a; }
+  h1 { font-size: 1.6em; }
+  h2 { font-size: 1.2em; margin-top: 1.8em; }
+  .updated { color: #666; font-size: 0.9em; }
+  .box { background: #f4f4f4; border-left: 3px solid #888; padding: 12px 16px; margin: 1em 0; }
+</style>
+</head>
+<body>
+
+<h1>FakeGuard Privacy Policy</h1>
+<p class="updated">Last updated: August 2, 2026</p>
+
+<p>FakeGuard is a browser extension and app that checks pictures and videos to help estimate whether they're AI-generated or otherwise faked. This page explains what FakeGuard does with your data, plainly and completely.</p>
+
+<h2>The short version</h2>
+<div class="box">
+FakeGuard checks content in several ways. Most checks run entirely on your device. One check — comparing content against fact-checkers and prior appearances online — sends some information to outside services (Google's Fact Check API and a reverse-image search service) to do this. It's on by default; you can turn it off in FakeGuard's settings and still get results from every other check.
+</div>
+
+<h2>What happens fully on your device (nothing sent anywhere)</h2>
+<p>Most of FakeGuard's checks run entirely on your device and never send anything anywhere: the frequency-pattern check (DCT), the learned-look classifier (MobileNet), the camera-sensor-fingerprint check (PRNU), all of the biological/physiological checks (heartbeat pattern, eye behavior, lip-sync), the local metadata/C2PA reading, and the local cache FakeGuard keeps so it doesn't re-check the same content twice.</p>
+
+<h2>What does get sent off your device, and why</h2>
+<p>When this is on (it's on by default, and you can turn it off), FakeGuard may send the image or video you're viewing, along with any nearby caption or claim text, to two outside services:</p>
+<ul>
+<li><strong>Google's Fact Check API</strong> — used to check whether this content has already been fact-checked by an independent source.</li>
+<li><strong>A reverse-image search provider (Bright Data)</strong> — used to check whether this exact content has appeared online before, possibly in a different context.</li>
+</ul>
+<p>This is used only to perform these two checks. No other part of FakeGuard sends anything off your device.</p>
+
+<h2>Your control over this</h2>
+<p>This behavior is on by default, but you can turn it off at any time in FakeGuard's settings. If you turn it off, you'll still get a result from every other check FakeGuard runs — you'll just lose the fact-checking and reverse-search parts of the score.</p>
+
+<h2>What FakeGuard does not do</h2>
+<p>FakeGuard does not sell your data, does not use what it sees for advertising, and does not store the actual images or videos you check — only a short fingerprint (a hash) and the resulting score, kept temporarily to avoid re-checking the same content, with older entries automatically deleted once a size limit is reached.</p>
+
+<h2>Contact</h2>
+<p>This project is built by a student as part of Israel's Ministry of Education מב"ט technology-excellence program. Questions about this policy can be sent to: <a href="mailto:matanbaruchsmith@gmail.com">matanbaruchsmith@gmail.com</a></p>
+
+<h2>Changes to this policy</h2>
+<p>This policy will be updated if what FakeGuard does with data changes — for example, once the phone/desktop apps are finalized and their own app-store data-safety details are decided. The "Last updated" date at the top will always reflect the most recent change.</p>
+
+<!-- TODO: This page was drafted early (2026-08-02), before the actual build was finished. Rewrite/verify it against
+     what the app actually does once the last build milestone (Milestone 16, per fakeguard_build_plan.md) is complete,
+     before final store submission — confirm the on-device vs. off-device list, the two named third-party services,
+     and the toggle-off behavior all still match the real, shipped app. -->
+
+</body>
+</html>
