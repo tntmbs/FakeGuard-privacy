@@ -15,47 +15,36 @@
 <body>
 
 <h1>FakeGuard Privacy Policy</h1>
-<p class="updated">Last updated: October 4, 2026</p>
+<p class="updated">Last updated: October 5, 2026</p>
 
-<p>FakeGuard is a browser extension and app that checks pictures and videos to help estimate whether they're AI-generated or otherwise faked. This page explains what FakeGuard does with your data, plainly and completely.</p>
+<p>FakeGuard helps you judge whether pictures and videos are genuine, edited, or AI-generated. This page explains what information FakeGuard uses and what happens to it.</p>
 
 <h2>The short version</h2>
 <div class="box">
-FakeGuard checks content in several ways. Most checks run entirely on your device. One check — comparing content against fact-checkers and prior appearances online — sends some information to outside services (Google's Fact Check API and a reverse-image search service) and may visit a few web pages where the same content appeared. It's on by default; you can turn it off in FakeGuard's settings and still get results from every other check.
+Most of FakeGuard's checks run on your device and send nothing anywhere. FakeGuard also offers optional online checks, which compare what you are viewing with fact-checks and earlier appearances on the web. Online checks are off until you turn them on, and you can turn them off again at any time.
 </div>
 
-<h2>What happens fully on your device (nothing sent anywhere)</h2>
-<p>Most of FakeGuard's checks run entirely on your device and never send anything anywhere: the frequency-pattern check (DCT), the learned-look classifier (MobileNet), the camera-sensor-fingerprint check (PRNU), all of the biological/physiological checks (heartbeat pattern, eye behavior, lip-sync), the local metadata/C2PA reading, the comparison of a picture against copies of itself, the plausibility check, and the local cache FakeGuard keeps so it doesn't re-check the same content twice.</p>
+<h2>What stays on your device</h2>
+<p>Most of FakeGuard's analysis runs locally. The pictures and videos you check are not uploaded. FakeGuard keeps a small local record of each check (a short fingerprint and the result) so it does not repeat work; older entries are deleted automatically.</p>
 
-<h2>What does get sent off your device, and why</h2>
-<p>When this is on (it's on by default, and you can turn it off), FakeGuard may send the web address of the image or video thumbnail you're viewing, along with any nearby caption or claim text, to two outside services:</p>
-<ul>
-<li><strong>Google's Fact Check API</strong> — used to check whether this content has already been fact-checked by an independent source. This receives the caption or claim text, or the image's web address.</li>
-<li><strong>A reverse-image search provider (Apify)</strong> — used to check whether this exact content has appeared online before, possibly in a different context. This receives the image's web address, and the service then fetches the picture from that address; FakeGuard never uploads the picture file itself. If the search suggests the content was used out of context, FakeGuard may send the matching page's address to the same provider for a second check.</li>
-</ul>
-<p>FakeGuard may also open up to three of the web pages that search found, and up to six pictures on each, to look for an original copy of the image with its source information intact. These are ordinary web requests, made from the connection FakeGuard is running on (in the browser extension, yours). The websites can see that a request was made, such as your internet address and browser type, as with any web visit; nothing about you or the file you are viewing is sent to them.</p>
-<p>This is used only to perform these checks. No other part of FakeGuard sends anything off your device.</p>
+<h2>What is sent when online checks are on</h2>
+<p>Only if you turn online checks on, FakeGuard may send the web address of the content you are viewing, and any nearby caption or claim text, to third-party fact-checking and image-search services. It may also visit a few public web pages related to the content to look for an original copy. These visits work like any web visit, so those sites can see standard connection details such as your internet address. The picture or video file itself is never uploaded, and this information is used only to produce your result.</p>
 
-<h2>Your control over this</h2>
-<p>This behavior is on by default, but you can turn it off at any time in FakeGuard's settings. If you turn it off, you'll still get a result from every other check FakeGuard runs — you'll just lose the fact-checking and reverse-search parts of the score.</p>
+<h2>Your choices</h2>
+<p>When you first open FakeGuard it asks whether to turn on online checks, and nothing is sent until you say yes. You can change your mind at any time in settings. With online checks off, you still get results from all of FakeGuard's other checks.</p>
 
-<h2>What FakeGuard does not do</h2>
-<p>FakeGuard does not sell your data, does not use what it sees for advertising, and does not store the actual images or videos you check — only a short fingerprint (a hash) and the resulting score, kept temporarily to avoid re-checking the same content, with older entries automatically deleted once a size limit is reached.</p>
+<h2>How long information is kept</h2>
+<p>Information sent for online checks is used only to produce your result. Where a service allows it, we ask the service to delete that information as soon as the result has been received. Third-party services may keep limited records under their own policies. We do not sell your information, use it for advertising, or read it for any other purpose.</p>
+
+<h2>Compliance</h2>
+<p>The use of information received from your browser by FakeGuard adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
 
 <h2>Contact</h2>
-<p>This project is built by a student as part of Israel's Ministry of Education מב"ט technology-excellence program. Questions about this policy can be sent to: <a href="mailto:matanbaruchsmith@gmail.com">matanbaruchsmith@gmail.com</a></p>
+<p>Questions about this policy can be sent to <a href="mailto:tntmbs18@gmail.com">tntmbs18@gmail.com</a>.</p>
 
 <h2>Changes to this policy</h2>
-<p>This policy will be updated if what FakeGuard does with data changes — for example, once the phone/desktop apps are finalized and their own app-store data-safety details are decided. The "Last updated" date at the top will always reflect the most recent change.</p>
+<p>If what FakeGuard does with information changes, this page will be updated and the date at the top will change.</p>
 
-<!-- TODO: This page was drafted early (2026-08-02), before the actual build was finished. Rewrite/verify it against
-     what the app actually does once the last build milestone (Milestone 16, per fakeguard_build_plan.md) is complete,
-     before final store submission — confirm the on-device vs. off-device list, the two named third-party services,
-     and the toggle-off behavior all still match the real, shipped app.
-     UPDATED 2026-10-04: now also covers the second (double-check) Apify search and source-page lookup added in
-     Milestone 5. The Adobe soft-binding lookup is NOT listed because it is inactive; add it here and to
-     fakeguard_handoff.md Section 4 BEFORE any build that enables it. The hosted copy at
-     tntmbs.github.io/FakeGuard-privacy/ is a separate repo and must be republished with this file. -->
 
 </body>
 </html>
